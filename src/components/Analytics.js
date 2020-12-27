@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { analytics } from '../App'
 
 function Analytics() {

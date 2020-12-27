@@ -13,6 +13,7 @@ function Contactus() {
           message: ""
         }
       );
+    const [message, setMessage] = useState("")
 
       const handlechange = (e) => {
         let dup = input;
@@ -31,12 +32,14 @@ function Contactus() {
         firedata.child('contactus-info').push(input,err=>{
             console.log(err)
         })
+        setMessage("Submited Successfully")
 
     }
 
 
     return (
         <div className="contactus">
+            <h3>{message}</h3>
             <div className="form">
                 <h1>Contact Us Form</h1>
                 <label>Name:</label><br/>
